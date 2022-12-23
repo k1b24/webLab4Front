@@ -42,7 +42,7 @@ export default {
     methods: {
         submit: function () {
             if (this.password_value === this.repeated_password_value) {
-                axios.post("http://localhost:1337/register", {
+                axios.post("http://localhost:18200/register", {
                     username: this.login_value,
                     password: this.password_value
                 })

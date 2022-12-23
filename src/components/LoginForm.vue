@@ -40,7 +40,7 @@ export default {
     },
     methods: {
         submit: function () {
-            axios.post("http://localhost:1337/token", {}, {
+            axios.post("http://localhost:18200/token", {}, {
                 auth: {
                     username: this.login_value,
                     password: this.password_value

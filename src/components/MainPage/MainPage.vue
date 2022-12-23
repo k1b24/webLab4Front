@@ -37,7 +37,7 @@ export default {
             localStorage.removeItem("token");
         },
         cleanTable: function () {
-            axios.post("http://localhost:1337/deleteResults", {}, {
+            axios.post("http://localhost:18200/deleteResults", {}, {
                 headers: {Authorization: "Bearer " + localStorage.token}
             }).then(() => {
                 this.allTableRows = [];
@@ -89,7 +89,7 @@ export default {
                 return;
             }
             this.$refs.CheckForm.hideErrorMessage();
-            axios.post("http://localhost:1337/check", {
+            axios.post("http://localhost:18200/check", {
                     x: Number(x),
                     y: Number(y),
                     r: Number(this.curR),
@@ -119,7 +119,7 @@ export default {
 
         },
         getAllResultsFromServer: function () {
-            axios.get("http://localhost:1337/results",
+            axios.get("http://localhost:18200/results",
                 {
                     headers: {Authorization: "Bearer " + localStorage.token}
                 }).then(res => {
